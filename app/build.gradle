@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
 
 repositories {
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
@@ -8,6 +9,11 @@ android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
     defaultConfig {
         applicationId "com.aldoborrero.tinderjs"
         minSdkVersion 21
@@ -15,11 +21,21 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
     }
 }
 
@@ -29,18 +45,21 @@ dependencies {
     compile 'com.android.support:support-annotations:21.0.0'
     compile 'com.android.support:palette-v7:21.0.0'
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.0'
 
     compile 'org.lucasr.twowayview:core:1.0.0-SNAPSHOT@aar'
     compile 'org.lucasr.twowayview:layouts:1.0.0-SNAPSHOT@aar'
-    compile 'com.squareup.retrofit:retrofit:1.8.0'
-    debugCompile 'com.squareup.retrofit:retrofit-mock:1.8.0'
     compile 'com.squareup.picasso:picasso:2.4.0'
     compile 'com.jakewharton:butterknife:6.0.0'
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'io.reactivex:rxandroid:0.23.0'
     compile 'com.google.dagger:dagger:2.0-SNAPSHOT'
-    provided 'com.google.dagger:dagger-compiler:2.0-SNAPSHOT'
+    apt "com.google.dagger:dagger-compiler:2.0-SNAPSHOT"
     compile 'com.jakewharton.timber:timber:2.5.0'
+    compile 'com.squareup.okhttp:okhttp:2.2.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
+
+    provided 'javax.annotation:jsr250-api:1.0'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
