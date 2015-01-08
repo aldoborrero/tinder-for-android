@@ -3,7 +3,7 @@
     package="com.aldoborrero.tinderjs">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    
+
     <application
         android:name=".ui.TinderJsApplication"
         android:allowBackup="true"
@@ -13,14 +13,19 @@
 
         <activity
             android:name=".ui.app.MainActivity"
-            android:theme="@style/Theme.TinderJs.MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:theme="@style/Theme.TinderJs.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ui.app.SettingsActivity"
+            android:label="@string/settings"
+            android:theme="@style/Theme.TinderJs.SettingsActivity" />
 
     </application>
 
