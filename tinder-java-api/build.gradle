@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+dependencies {
+    compile 'com.squareup.retrofit:retrofit:1.8.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.netflix.rxjava:rxjava-core:0.20.7'
+
+    //debugCompile 'com.squareup.retrofit:retrofit-mock:1.8.0'
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
