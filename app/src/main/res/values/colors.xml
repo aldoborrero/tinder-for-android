@@ -17,4 +17,6 @@
     <color name="grid_item_background">@color/monday</color>
     <color name="navigation_drawer_background">@color/monday</color>
 
+    <color name="profile_cover_color_background">@color/i_can_see_all</color>
+
 </resources>

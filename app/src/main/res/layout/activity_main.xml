@@ -25,9 +25,9 @@
     </LinearLayout>
 
     <!-- Nav Drawer -->
-    <com.aldoborrero.tinderjs.ui.widgets.ScrimInsetsFrameLayout
-        android:id="@+id/scrimInsetsFrameLayout"
-        android:layout_width="@dimen/drawer_width"
+    <com.aldoborrero.tinderjs.ui.widgets.DrawerContainerFrameLayout
+        android:id="@+id/scrim_insets_layout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@color/navigation_drawer_background"
@@ -42,6 +42,6 @@
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_navigation_drawer" />
 
-    </com.aldoborrero.tinderjs.ui.widgets.ScrimInsetsFrameLayout>
+    </com.aldoborrero.tinderjs.ui.widgets.DrawerContainerFrameLayout>
 
 </android.support.v4.widget.DrawerLayout>
