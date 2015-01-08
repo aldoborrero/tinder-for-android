@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import com.aldoborrero.tinderjs.R;
 import com.aldoborrero.tinderjs.ui.base.TinderJsFragment;
 
-public class DrawerFragment extends TinderJsFragment {
+public class NavigationDrawerFragment extends TinderJsFragment {
 
     @Nullable
     @Override

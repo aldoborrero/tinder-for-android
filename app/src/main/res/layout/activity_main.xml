@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
     <!-- Main Container Layout -->
     <LinearLayout
@@ -17,14 +18,15 @@
         <FrameLayout
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_explore"/>
 
     </LinearLayout>
 
     <!-- Nav Drawer -->
     <fragment
         android:id="@+id/fragment_drawer"
-        android:name="com.aldoborrero.tinderjs.ui.app.DrawerFragment"
+        android:name="com.aldoborrero.tinderjs.ui.app.NavigationDrawerFragment"
         android:layout_width="@dimen/drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
