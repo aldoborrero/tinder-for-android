@@ -22,10 +22,14 @@
 
     <style name="Theme.TinderJs" parent="Theme.TinderJs.Base" />
 
-    <style name="Theme.TinderJs.WithNavDrawer" parent="Theme.TinderJs">
+    <style name="Theme.TinderJs.WithNavDrawer" parent="Theme.TinderJs" />
+
+    <style name="Theme.TinderJs.MainActivity" parent="Theme.TinderJs.WithNavDrawer">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="Theme.TinderJs.MainActivity" parent="Theme.TinderJs.WithNavDrawer" />
+    <style name="Theme.TinderJs.SettingsActivity" parent="Theme.TinderJs" />
 
     <style name="TinderJs.Toolbar.Style" parent="">
         <item name="android:elevation">@dimen/action_bar_elevation</item>
