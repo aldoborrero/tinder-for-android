@@ -3,6 +3,7 @@ package com.aldoborrero.tinderjs.utils;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Point;
 import android.os.Build;
 import android.util.TypedValue;
@@ -47,6 +48,15 @@ public class Dimens {
             return size.y;
         }
         return display.getHeight();
+    }
+
+    public static int getActionBarSize(Context context) {
+        int[] textSizeAttr = new int[]{android.R.attr.actionBarSize};
+        int indexOfAttrTextSize = 0;
+        TypedArray a = context.obtainStyledAttributes(new TypedValue().data, textSizeAttr);
+        int actionBarSize = a.getDimensionPixelSize(indexOfAttrTextSize, -1);
+        a.recycle();
+        return actionBarSize;
     }
 
 }
