@@ -6,4 +6,6 @@
     <dimen name="action_bar_elevation">8dp</dimen>
     <dimen name="drawer_width">300dp</dimen>
 
+    <dimen name="list_explore_image_size">80dp</dimen>
+
 </resources>

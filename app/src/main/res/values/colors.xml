@@ -2,7 +2,19 @@
 
 <resources>
 
-    <color name="primary">#DB4C2C</color>
-    <color name="primary_dark">#C23313</color>
+    <!-- Color Palette: http://www.colourlovers.com/palette/3232660/Tinder_colors -->
+    <color name="little_else">#D0D0C4</color>
+    <color name="atmospheric">#CECAC1</color>
+    <color name="monday">#FDF7EB</color>
+    <color name="brown_black">#343434</color>
+    <color name="i_can_see_all">#DB4C2C</color>
+    <color name="i_can_see_all_darker">#c8c23313</color>
+
+    <color name="primary">@color/i_can_see_all</color>
+    <color name="primary_dark">@color/i_can_see_all_darker</color>
+    <color name="window_background">@color/brown_black</color>
+    <color name="text_primary">@color/monday</color>
+    <color name="grid_item_background">@color/monday</color>
+    <color name="navigation_drawer_background">@color/monday</color>
 
 </resources>
