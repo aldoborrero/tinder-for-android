@@ -1,11 +1,33 @@
+/*
+ * Copyright 2015 Aldo Borrero <aldo@aldoborrero.com>
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.aldoborrero.tinder.api;
 
-import com.aldoborrero.tinder.api.services.TinderService;
-import com.google.gson.GsonBuilder;
+import com.aldoborrero.tinder.api.services.AsyncTinderService;
+import com.aldoborrero.tinder.api.services.MockTinderService;
+import com.aldoborrero.tinder.api.services.ObservableTinderService;
+import com.aldoborrero.tinder.api.services.SyncTinderService;
+import com.aldoborrero.tinder.api.utils.TinderGsonFactory;
+import com.aldoborrero.tinder.api.utils.TinderOkHttpFactory;
 
 import retrofit.Endpoint;
+import retrofit.MockRestAdapter;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
+import retrofit.client.OkClient;
 import retrofit.converter.GsonConverter;
 
 public class Tinder {
@@ -33,7 +55,8 @@ public class Tinder {
         if (restAdapter == null) {
             restAdapter = new RestAdapter.Builder()
                     .setEndpoint(endpoint)
-                    .setConverter(new GsonConverter(new GsonBuilder().create()))
+                    .setClient(new OkClient(TinderOkHttpFactory.create()))
+                    .setConverter(new GsonConverter(TinderGsonFactory.create()))
                     .setRequestInterceptor(new RequestInterceptor() {
                         @Override
                         public void intercept(RequestFacade requestFacade) {
@@ -49,8 +72,22 @@ public class Tinder {
         return restAdapter;
     }
 
-    public TinderService createTinderService() {
-        return getRestAdapter().create(TinderService.class);
+    public ObservableTinderService createObservableTinderService() {
+        return getRestAdapter().create(ObservableTinderService.class);
+    }
+
+    public AsyncTinderService createAsyncTinderService() {
+        return getRestAdapter().create(AsyncTinderService.class);
+    }
+
+    public SyncTinderService createSyncTinderService() {
+        return getRestAdapter().create(SyncTinderService.class);
+    }
+
+    public ObservableTinderService createMockObservableTinderService() {
+        MockRestAdapter mockRestAdapter = MockRestAdapter.from(getRestAdapter());
+        MockTinderService mockTinderService = new MockTinderService();
+        return mockRestAdapter.create(ObservableTinderService.class, mockTinderService);
     }
 
     public Configuration getConfiguration() {
