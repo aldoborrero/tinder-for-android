@@ -22,7 +22,8 @@ public class DrawerContainerFrameLayout extends ScrimInsetsFrameLayout {
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         // See http://www.google.com/design/spec/layout/structure.html#structure-side-nav
-        setMinimumWidth(Dimens.getScreenWidth(getContext()) - actionBarSize);
+        int width = Dimens.getScreenWidth(getContext()) - actionBarSize;
+        setMeasuredDimension(width, getMeasuredHeight());
     }
 
 }
