@@ -1,6 +1,24 @@
-# TinderJs for Android
+# Tinder for Android [![Build Status](https://travis-ci.org/aldoborrero/tinder-for-android.svg)](https://travis-ci.org/aldoborrero/tinder-for-androidtinder-flame.png)
 
-To be written…
+![](assets/tinder-flame.png)
+
+An Open Source client for Tinder!
+
+##Technology stack
+
+To be written...
+
+## Contributions
+
+Feel free to contribute to this project if you feel something could be improved or fixed. We're using Git Flow in order to add/improve features (naming is `feature/whatever-idea`).
+
+## About
+
+You can find me on:
+
+- [YouTube Channel](https://www.youtube.com/user/aldoborrero)
+- Twitter: [@aldoborrero](http://twitter.com/aldoborrero)
+- Google+: [+aldoborrero](http://plus.google.com/+aldoborrero)
 
 ## License
 
@@ -10,7 +28,7 @@ To be written…
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
