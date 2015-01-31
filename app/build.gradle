@@ -3,7 +3,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 repositories {
+    jcenter()
+    maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
     maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    mavenLocal()
 }
 
 android {
@@ -16,8 +19,8 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.aldoborrero.tinderjs"
-        minSdkVersion 21
+        applicationId "com.aldoborrero.tinder"
+        minSdkVersion 14
         targetSdkVersion 21
         versionCode 1
         versionName "1.0"
@@ -60,6 +63,9 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp:2.2.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.2.0'
     compile 'com.facebook.android:facebook-android-sdk:3.22.0'
+    compile 'de.hdodenhof:circleimageview:1.2.1'
+    compile 'com.aldoborrero:tinder-java-api:0.1.0-SNAPSHOT'
+    compile 'org.jetbrains:annotations:7.0.2'
 
     provided 'javax.annotation:jsr250-api:1.0'
 

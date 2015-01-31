@@ -1,1 +1,1 @@
-include ':app', ':tinder-java-api'
+include ':app'
