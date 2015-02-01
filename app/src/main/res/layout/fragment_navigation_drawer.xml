@@ -5,8 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.aldoborrero.tinderjs.ui.widgets.AccountView
+    <com.aldoborrero.tinder.ui.widgets.AccountView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/navigation_drawer_background"/>
 
 </LinearLayout>

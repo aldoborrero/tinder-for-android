@@ -25,23 +25,22 @@
     </LinearLayout>
 
     <!-- Nav Drawer -->
-    <com.aldoborrero.tinderjs.ui.widgets.DrawerContainerFrameLayout
+    <com.aldoborrero.tinder.ui.widgets.DrawerContainerFrameLayout
         android:id="@+id/scrim_insets_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:background="@color/navigation_drawer_background"
         android:elevation="10dp"
         android:fitsSystemWindows="true"
         app:insetForeground="#4000">
 
         <fragment
             android:id="@+id/fragment_drawer"
-            android:name="com.aldoborrero.tinderjs.ui.app.NavigationDrawerFragment"
+            android:name="com.aldoborrero.tinder.ui.app.NavigationDrawerFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_navigation_drawer" />
 
-    </com.aldoborrero.tinderjs.ui.widgets.DrawerContainerFrameLayout>
+    </com.aldoborrero.tinder.ui.widgets.DrawerContainerFrameLayout>
 
 </android.support.v4.widget.DrawerLayout>

@@ -18,5 +18,6 @@
     <color name="navigation_drawer_background">@color/monday</color>
 
     <color name="profile_cover_color_background">@color/i_can_see_all</color>
+    <color name="profile_circular_color_background">@color/monday</color>
 
 </resources>

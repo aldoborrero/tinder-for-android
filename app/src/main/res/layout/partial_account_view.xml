@@ -3,72 +3,58 @@
 <!-- Layout inspired by iosched 2014 app: https://github.com/google/iosched -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/chosen_account_view"
     android:layout_width="match_parent"
     android:layout_height="@dimen/accountview_height"
+    android:background="@color/profile_cover_color_background"
+    android:clickable="true"
     android:foreground="?android:selectableItemBackground">
 
-    <View
-        android:id="@+id/profile_cover_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/profile_cover_color_background"/>
-
-    <!--<RelativeLayout
+    <RelativeLayout
         android:id="@+id/chosen_account_content_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="@dimen/keyline_1"
-        android:paddingRight="@dimen/keyline_1"
-        android:paddingTop="@dimen/keyline_1">
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="36dp">
 
-        <com.google.samples.apps.iosched.ui.widget.BezelImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
-            android:layout_width="@dimen/navdrawer_profile_image_size"
-            android:layout_height="@dimen/navdrawer_profile_image_size"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:elevation="8dp"
             android:scaleType="centerCrop"
             android:src="@drawable/person_image_empty"
-            app:maskDrawable="@drawable/circle_mask" />
-
-        <ImageView
-            android:id="@+id/expand_account_box_indicator"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="16dp"
-            android:paddingBottom="16dp"
-            android:scaleType="center"
-            android:src="@drawable/ic_drawer_accounts_expand"
-            android:visibility="gone" />
+            app:border_color="@color/profile_circular_color_background"
+            app:border_width="2dp" />
 
         <TextView
             android:id="@+id/profile_email_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/profile_image"
             android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@id/expand_account_box_indicator"
             android:ellipsize="end"
             android:maxLines="1"
             android:paddingBottom="16dp"
+            android:textSize="14sp"
             android:singleLine="true"
-            android:textColor="@color/body_text_2_inverse"
-            android:textSize="@dimen/text_size_medium" />
+            android:text="foo@foobar.com"
+            tools:text="foo@foobar.com" />
 
         <TextView
             android:id="@+id/profile_name_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@id/profile_email_text"
-            android:layout_alignLeft="@id/profile_image"
-            android:layout_toLeftOf="@id/expand_account_box_indicator"
             android:ellipsize="end"
             android:maxLines="1"
             android:singleLine="true"
-            android:textColor="@color/body_text_1_inverse"
-            android:textSize="@dimen/text_size_large" />
+            android:text="John Doe"
+            android:textSize="18sp"
+            tools:text="John Doe" />
 
-    </RelativeLayout>-->
+    </RelativeLayout>
 
 </FrameLayout>

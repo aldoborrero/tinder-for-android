@@ -3,7 +3,7 @@
 
     <style name="FrameworkRoot.Theme" parent="Theme.AppCompat.NoActionBar" />
 
-    <style name="Theme.TinderJs.Base" parent="FrameworkRoot.Theme">
+    <style name="Theme.Tinder.Base" parent="FrameworkRoot.Theme">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primary_dark</item>
         <item name="android:windowBackground">@color/window_background</item>
@@ -20,16 +20,16 @@
         <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
     </style>
 
-    <style name="Theme.TinderJs" parent="Theme.TinderJs.Base" />
+    <style name="Theme.Tinder" parent="Theme.Tinder.Base" />
 
-    <style name="Theme.TinderJs.WithNavDrawer" parent="Theme.TinderJs" />
+    <style name="Theme.Tinder.WithNavDrawer" parent="Theme.Tinder" />
 
-    <style name="Theme.TinderJs.MainActivity" parent="Theme.TinderJs.WithNavDrawer">
+    <style name="Theme.Tinder.MainActivity" parent="Theme.Tinder.WithNavDrawer">
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="Theme.TinderJs.SettingsActivity" parent="Theme.TinderJs" />
+    <style name="Theme.Tinder.SettingsActivity" parent="Theme.Tinder" />
 
     <style name="TinderJs.Toolbar.Style" parent="">
         <item name="android:elevation">@dimen/action_bar_elevation</item>

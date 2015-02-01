@@ -3,7 +3,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.0.1'
         //classpath 'me.tatarka:gradle-retrolambda:2.5.0'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
     }
@@ -11,6 +11,9 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenCentral()
+        jcenter()
+        maven { url "https://repository.jboss.org/nexus/content/repositories/thirdparty-releases" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        mavenLocal()
     }
 }
